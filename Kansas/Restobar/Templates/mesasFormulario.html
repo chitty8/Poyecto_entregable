@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+    <form action="{% url "MesasFormulario" %}" method="POST">{% csrf_token %}
+
+     <p>Nombre: <input type="text" name="nombre"/> </p>
+
+     <p>Numero de mesa: <input type="number" name="numero"/> </p>
+
+     <input type="submit" value="Reservar">
+
+
+    </form>
+    
+{% endblock contenido %}

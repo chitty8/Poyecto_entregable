@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+ <h1 style=color:rgb(0,255,55) >Vista de Meseros</h1>
+
+ <h4> Estos son los meseros!</h4>
+ 
+ <ul>
+        
+    {% for mesero in lista_meseros  %}
+        <li>{{mesero.nombre}} - {{mesero.apellido}} - {{mesero.dni}}</li>
+        
+    {% endfor %}
+        
+</ul>
+    
+{% endblock contenido %}
+    

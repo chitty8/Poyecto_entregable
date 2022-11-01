@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+ <h1 style=color:rgb(255,0,234) >Vista de Mesas</h1>
+
+ <h4> Aca estan las mesas!</h4>
+
+ <ul>
+        
+    {% for mesa in lista_mesas  %}
+        <li>{{mesa.nombre}} - {{mesa.numero}}</li>
+        
+    {% endfor %}
+        
+</ul>
+
+    
+{% endblock contenido %}
+    

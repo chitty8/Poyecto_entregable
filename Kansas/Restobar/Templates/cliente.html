@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+    <h1 style=color:blue >Vista de Clientes</h1>
+
+    <h4> Estos son los clientes!</h4>
+
+    <ul>
+        
+        {% for clientes in lista_clientes  %}
+             <li>{{clientes.nombre}} - {{clientes.apellido}}</li>
+         {% endfor %}
+        
+    </ul>
+
+    
+{% endblock contenido %}
+    
